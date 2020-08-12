@@ -1,0 +1,13 @@
+div.main-container {
+    display: flex;
+}
+
+div.main-container .posts-box {
+    border: 1px solid black;
+    width: 800px;
+    margin: 0 1rem 0 auto;
+}
+
+aside {
+    margin: 0 1rem 0 1rem;
+}
