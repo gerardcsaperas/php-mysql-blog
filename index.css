@@ -1,8 +1,0 @@
-@import "./style/header.css";
-@import "./style/main.css";
-@import "./style/footer.css";
-
-body, ul {
-    margin: 0;
-    padding: 0;
-}

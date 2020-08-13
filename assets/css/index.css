@@ -1,0 +1,59 @@
+/* Imports not working as expected (delay?)
+ @import "./main.css"; */
+@import "./header.css";
+@import "./footer.css";
+
+body, ul {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif
+}
+
+/*********** MAIN ***********/
+div.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+div.main-container .posts-box {
+    border: 1px solid black;
+    width: 900px;
+    margin-right: 5rem;
+}
+
+div.main-container aside {
+    max-width: 250px;
+}
+
+div.main-container aside p {
+    padding: 1rem;
+    background-color: beige;
+    border-radius: 10px;
+}
+
+/*********** REGISTER ***********/
+div.register-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 60vh;
+    margin: 0 auto;
+}
+
+div.register-form-container form {
+    background: bisque;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+div.register-form-container form label {
+    margin: 0.5rem 1rem 0 1rem;
+    font-size: 1.25rem;
+}
+
+div.register-form-container form input {
+    margin: 0.5rem 1rem 1rem 1rem;
+    font-size: 1.25rem;
+}

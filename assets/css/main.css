@@ -1,13 +1,12 @@
 div.main-container {
     display: flex;
+    justify-content: center;
 }
 
 div.main-container .posts-box {
     border: 1px solid black;
-    width: 800px;
-    margin: 0 1rem 0 auto;
+    width: 1500px;
 }
 
 aside {
-    margin: 0 1rem 0 1rem;
 }
