@@ -39,8 +39,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password_verify = password_verify($password, $user['password']);
             
         if ($password_verify) {
-            // Store user data in the session
+            // Store user data in the session and go back to homepage
             $_SESSION['user'] = $user;
+            echo "<p>Logged in as " . $user['username'] . ".</p>"
+                ."<p>If you are not redirected to the homepage in 5 sec, "
+                ."click <a href='../index.php'>here</a>.</p>";
+            header( "Refresh:5; ../index.php", true, 303);
         } else {
             // Echo out error
             echo "<p style='color:red'>Wrong credentials</p>";
