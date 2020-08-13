@@ -3,19 +3,20 @@
 // Render Header
 require_once '../includes/register_login_header.php';
 
-// Connect to DB
-require_once '../includes/dbconnection.php';
-
-// Function to validate data from POST request
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
 // If a POST request has been submitted...
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Connect to DB
+    require_once '../includes/dbconnection.php';
+
+    session_start();
+
+    // Function to validate data from POST request
+    function test_input($data) {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+    }
     
     
     // Store the fata from the post request into a variable, validate and sanitize
@@ -25,13 +26,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $password = (isset($_POST['password'])) ? test_input(filter_input(INPUT_POST, 'password')) : false;
     
+    // Encrypt password
+    $safe_password = password_hash($password, PASSWORD_BCRYPT, ['cost'=>12]);
+     
     // Insert data from POST request into users table
-    $new_user = "INSERT INTO users VALUES(NULL, '$username', '$email', '$password', NULL)";
+    $new_user = "INSERT INTO users VALUES(NULL, '$username', '$email', '$safe_password', CURDATE())";
 
     $insert_new_user = mysqli_query($db, $new_user);
 
     
-    // If 
+    // If user inserted correctly...Else...
     if($insert_new_user) {
         echo "<p>New user created. "
         ."<a href='login.view.php'>Login</a>"

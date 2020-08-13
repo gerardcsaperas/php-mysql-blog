@@ -9,7 +9,7 @@
     <input type="email" name="email" required /><br>
             
     <label for="password">Password</label><br>
-    <input type="password" name="password" minlength="8" placeholder="8 characters or more..." required pattern="[A-Za-z0-9]+" /><br>
+    <input type="password" name="password" minlength="8" pattern="[A-Za-z0-9]+" placeholder="8 characters or more..." required pattern="[A-Za-z0-9]+" /><br>
             
     <input type="submit" value="Register">
 </form>
