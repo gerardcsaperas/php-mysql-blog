@@ -1,8 +1,12 @@
 <?php
 
 session_start();
+
+// Check if user is logged in
 $logged_in = isset($_SESSION['user']) ? true : false;
-$username = $_SESSION['user']['username'];
+
+// If user is logged in, retrieve username
+$username = isset($_SESSION['user']) ? $_SESSION['user']['username'] : null;
 
 ?>
 <!DOCTYPE html>
@@ -22,12 +26,14 @@ $username = $_SESSION['user']['username'];
                 </a>
                 <ul class="top-section__access-buttons">
                     <li>
+                        <!-- If user is logged in, show username, else show 'Register' -->
                         <a href="<?php echo $logged_in ? './views/user.view.php' : './views/register.view.php'?>">
                             <i class="fas fa-user"></i>
                             <?php echo $logged_in ? trim($username) : 'Register';?>
                         </a>
                     </li>
                     <li>
+                        <!-- If user is logged in, show 'Logout', else show 'Login' -->
                         <a href="<?php echo $logged_in ? './views/logout.php' : './views/login.view.php'?>">
                             <i class="fas fa-sign-in-alt"></i>
                             <?php echo $logged_in ? 'Logout' : 'Login';?>

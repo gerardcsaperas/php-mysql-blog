@@ -1,8 +1,4 @@
-<?php
-
-require_once './includes/header.php';
-
-?>       
+<?php require_once 'includes/header.php'; ?>       
         <!-- MAIN CONTAINER -->
         <div class="main-container">
           <main class="posts-box">
@@ -27,8 +23,4 @@ require_once './includes/header.php';
             </aside>
         </div>
         
-<?php
-
-require_once './includes/footer.php';                  
-        
-?>
+<?php require_once 'includes/footer.php'; ?>
