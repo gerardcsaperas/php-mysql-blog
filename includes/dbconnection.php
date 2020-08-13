@@ -13,5 +13,6 @@ if ($db -> connect_errno) {
   exit();
 }
 
+// Allow for utf8 characters
 mysqli_query($db, "SET_NAMES 'utf8'");
 
