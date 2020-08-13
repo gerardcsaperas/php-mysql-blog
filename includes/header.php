@@ -1,3 +1,4 @@
+<?php require_once 'dbconnection.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,12 +16,12 @@
                 </a>
                 <ul class="top-section__access-buttons">
                     <li>
-                        <a href="register.view.php">
+                        <a href="./views/register.view.php">
                             <i class="fas fa-user"></i>Register
                         </a>
                     </li>
                     <li>
-                        <a href="login.view.php">
+                        <a href="./views/login.view.php">
                             <i class="fas fa-sign-in-alt"></i>Login
                         </a>
                     </li>

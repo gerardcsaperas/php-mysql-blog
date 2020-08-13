@@ -23,7 +23,7 @@ require_once './includes/header.php';
           </main>  
             <!-- SIDEBAR (RIGHT) -->
             <aside class="sidebar-right">
-                <p>You need to be a <a href="register.view.php">registered</a> user in order to view the content.</p>
+                <p>You need to be a <a href="./views/register.view.php">registered</a> user in order to view the content.</p>
             </aside>
         </div>
         
