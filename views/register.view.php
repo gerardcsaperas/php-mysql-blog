@@ -15,7 +15,6 @@
 </form>
 
 <p>Already a registered user? <a href="login.view.php">Login</a> instead!</p>
-</div>
         
 <?php
 require_once '../includes/footer.php';                       

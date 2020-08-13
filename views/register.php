@@ -1,6 +1,6 @@
 <?php
 
-// Check what to render from the view
+// Render Header
 require_once '../includes/register_login_header.php';
 
 // Connect to DB
@@ -45,4 +45,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+// Render Footer
 require_once '../includes/footer.php';                       
