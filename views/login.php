@@ -6,6 +6,8 @@ require_once '../includes/register_login_header.php';
 // Connect to DB
 require_once '../includes/dbconnection.php';
 
+session_start();
+
 // Function to validate data from POST request
 function test_input($data) {
   $data = trim($data);
@@ -22,20 +24,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = (isset($_POST['password'])) ? test_input(filter_input(INPUT_POST, 'password')) : false;
     
     // Insert data from POST request into users table
-    $user =
-            "SELECT email FROM users"
-           ."WHERE email='$email' AND password='$password'";
+    $query = "SELECT * FROM users WHERE email='$email'";
 
-    $login_user = mysqli_query($db, $user);
+    $login = mysqli_query($db, $query);
 
     
-    // If query returns a user, log in
-    if($user) {
-        echo "<p>Logged In</p>";
+    // If query returns a user, check if password matches
+    if($login && mysqli_num_rows($login) === 1) {
+        
+        // Convert query result into associative array
+        $user = mysqli_fetch_assoc($login);
+                
+        // Check password
+        $password_verify = password_verify($password, $user['password']);
+            
+        if ($password_verify) {
+            // Store user data in the session
+            $_SESSION['user'] = $user;
+        } else {
+            // Echo out error
+            echo "<p style='color:red'>Wrong credentials</p>";
+            echo "<a href='login.view.php'>Try again</a>";
+        }
     } else {
-            echo "<p>Error" . mysqli_error($db) . "</p>";
-    }
-}
+            // Redirect to login view
+         echo "<p style='color:red'>Wrong credentials</p>";
+         echo "<a href='login.view.php'>Try again</a>";
+    }      
+}           
 
 // Render Footer
 require_once '../includes/footer.php';  

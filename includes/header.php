@@ -1,4 +1,10 @@
-<?php require_once 'dbconnection.php'; ?>
+<?php
+
+session_start();
+$logged_in = isset($_SESSION['user']) ? true : false;
+$username = $_SESSION['user']['username'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,13 +22,15 @@
                 </a>
                 <ul class="top-section__access-buttons">
                     <li>
-                        <a href="./views/register.view.php">
-                            <i class="fas fa-user"></i>Register
+                        <a href="<?php echo $logged_in ? './views/user.view.php' : './views/register.view.php'?>">
+                            <i class="fas fa-user"></i>
+                            <?php echo $logged_in ? trim($username) : 'Register';?>
                         </a>
                     </li>
                     <li>
-                        <a href="./views/login.view.php">
-                            <i class="fas fa-sign-in-alt"></i>Login
+                        <a href="<?php echo $logged_in ? './views/logout.php' : './views/login.view.php'?>">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <?php echo $logged_in ? 'Logout' : 'Login';?>
                         </a>
                     </li>
                 </ul> 
