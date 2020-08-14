@@ -3,9 +3,6 @@
 // Render Header
 require_once '../includes/register_login_header.php';
 
-// Connect to DB
-require_once '../includes/dbconnection.php';
-
 session_start();
 
 // Function to validate data from POST request

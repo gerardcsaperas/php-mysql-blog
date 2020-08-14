@@ -1,5 +1,11 @@
 <?php
 
+// Connect to DB
+require_once 'includes/dbconnection.php';
+
+// Require helper functions
+require_once 'helpers.php';
+
 session_start();
 
 // Check if user is logged in
@@ -27,7 +33,7 @@ $username = isset($_SESSION['user']) ? $_SESSION['user']['username'] : null;
                 <ul class="top-section__access-buttons">
                     <li>
                         <!-- If user is logged in, show username, else show 'Register' -->
-                        <a href="<?php echo $logged_in ? './views/user.view.php' : './views/register.view.php'?>">
+                        <a href="<?php echo $logged_in ? './user.view.php' : './views/register.view.php'?>">
                             <i class="fas fa-user"></i>
                             <?php echo $logged_in ? trim($username) : 'Register';?>
                         </a>
