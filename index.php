@@ -18,9 +18,12 @@
             </article>
           </main>  
             <!-- SIDEBAR (RIGHT) -->
-            <aside class="sidebar-right">
-                <p>You need to be a <a href="./views/register.view.php">registered</a> user in order to view the content.</p>
-            </aside>
-        </div>
+            <?php
+            if(!$logged_in){
+                echo "<aside class='sidebar-right'>"
+                    ."<p>You need to be a <a href='./views/register.view.php'>registered</a> user in order to view the content.</p>"
+                    ."</aside>";
+                }
+            ?>
         
 <?php require_once 'includes/footer.php'; ?>
