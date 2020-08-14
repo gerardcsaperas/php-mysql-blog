@@ -3,7 +3,7 @@ header .top-section {
     justify-content: space-around;
     align-items: center;
     background-color: tomato;
-    width: 100vw;
+    width: 100%;
 }
 
 header .top-section a {

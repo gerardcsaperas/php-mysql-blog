@@ -22,7 +22,4 @@ require_once '../includes/dbconnection.php';
                 </a>
             </div>
         </header>
-        
-        <!-- REGISTER -->
-        <div class="register-login-form-container">
 

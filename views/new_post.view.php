@@ -1,13 +1,13 @@
 <?php require_once '../includes/register_login_header.php'; ?>
 
-<div class="blog-post-box">
+<div class="editor-post-box">
 <form action="<?php echo htmlspecialchars('register.php');?>" method="POST" enctype="multipart/form-data">
     <label for="title">Post Title</label><br>
-    <input type="text" name="title" required><br>
+    <input id="title" type="text" name="title" required><br>
     
     <textarea></textarea><br>
     <div class="category-selector-box">
-        <p>Select your post's category:</p>
+        <p class="category-selector-box__label-for-categories">Select your post's category:</p>
         <div class="category-selector-box__group">
             <input type="radio" id="japan" name="category" value="japan"
                    checked>
@@ -23,6 +23,7 @@
             <label for="random">Random</label>
         </div>
     </div>
+    <input id="submit" type="submit" value="Submit Post" />
 </form>
 </div>
 

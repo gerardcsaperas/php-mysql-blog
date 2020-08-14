@@ -1,10 +1,55 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Aug 14, 2020, 7:20:00 PM
-    Author     : Gerard
-*/
+div.editor-post-box {
+    flex: 1 0 auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
 
+div.editor-post-box form textarea {
+    width: 80%;
+    height: 50vh;
+    margin: 0 auto;
+}
+
+div.editor-post-box form input#title {
+    width: 80%;
+    margin: 1rem;
+}
+
+p.category-selector-box__label-for-categories {
+    font-size: 1.25rem;
+    margin: 1rem;
+}
+
+div.category-selector-box__group input {
+   margin: 0; 
+}
+
+div.editor-post-box form label{
+    margin-right: 1rem;
+}
+
+div.editor-post-box form input#submit {
+    background-color: lightgreen;
+    color: #504f54;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 0.65rem 1rem;
+    box-shadow: 2px 2px 0px 0px #444;
+    text-decoration: none;
+}
+
+div.editor-post-box form input#submit:hover {
+    cursor: pointer;
+}
+
+div.editor-post-box form input#submit:active {
+    background-color: green;
+    color: white;
+    border: none;
+    box-shadow: none;    
+}
