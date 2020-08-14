@@ -12,7 +12,7 @@ $greetings = [
 ?>    
 <div class="user-control-panel-container">
     <h1><?= $greetings[array_rand($greetings, 1)] ?></h1>
-    <button>Create new post</button>
+    <a href="create_new_post.view.php">Create new post</a>
 </div>
 
 

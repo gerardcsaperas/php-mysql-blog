@@ -1,3 +1,4 @@
+/*********** MAIN ***********/
 div.main-container {
     flex: 1 0 auto;
     display: flex;
@@ -6,5 +7,16 @@ div.main-container {
 
 div.main-container .posts-box {
     border: 1px solid black;
-    width: 1500px;
+    width: 900px;
+    margin-right: 5rem;
+}
+
+div.main-container aside {
+    max-width: 250px;
+}
+
+div.main-container aside p {
+    padding: 1rem;
+    background-color: beige;
+    border-radius: 10px;
 }

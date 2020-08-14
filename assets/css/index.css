@@ -1,7 +1,9 @@
-/* Imports not working as expected (delay?)
- @import "./main.css"; */
+
+@import "./main.css";
 @import "./header.css";
 @import "./footer.css";
+@import "./register.css";
+@import "./user.view.css";
 
 body {
     min-height: 100vh;
@@ -10,54 +12,4 @@ body {
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
-}
-
-/*********** MAIN ***********/
-div.main-container {
-    display: flex;
-    justify-content: center;
-}
-
-div.main-container .posts-box {
-    border: 1px solid black;
-    width: 900px;
-    margin-right: 5rem;
-}
-
-div.main-container aside {
-    max-width: 250px;
-}
-
-div.main-container aside p {
-    padding: 1rem;
-    background-color: beige;
-    border-radius: 10px;
-}
-
-/*********** REGISTER ***********/
-div.register-login-form-container {
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90vw;
-    height: 60vh;
-    margin: 0 auto;
-}
-
-div.register-login-form-container form {
-    background: bisque;
-    border-radius: 20px;
-    padding: 1rem;
-}
-
-div.register-login-form-container form label {
-    margin: 0.5rem 1rem 0 1rem;
-    font-size: 1.25rem;
-}
-
-div.register-login-form-container form input {
-    margin: 0.5rem 1rem 1rem 1rem;
-    font-size: 1.25rem;
 }
