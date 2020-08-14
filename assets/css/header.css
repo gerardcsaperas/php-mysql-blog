@@ -3,6 +3,7 @@ header .top-section {
     justify-content: space-around;
     align-items: center;
     background-color: tomato;
+    width: 100vw;
 }
 
 header .top-section a {
@@ -18,6 +19,7 @@ header .top-section__logo {
 
 header ul.top-section__access-buttons {
     margin: 1rem 0 1rem 0;
+    padding: 0;
     display: flex;
     list-style-type: none;
 }

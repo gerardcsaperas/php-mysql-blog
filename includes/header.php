@@ -19,6 +19,8 @@ $username = isset($_SESSION['user']) ? $_SESSION['user']['username'] : null;
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="PHP & MySQL Blog" />
         <link rel="stylesheet" type="text/css" href="./assets/css/index.css" />
         <script src="https://kit.fontawesome.com/85b8e23c67.js" crossorigin="anonymous"></script>
         <title>PHP & MySQL Blog</title>
