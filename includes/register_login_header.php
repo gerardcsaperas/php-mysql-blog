@@ -1,3 +1,10 @@
+<?php
+
+// Connect to DB
+require_once '../includes/dbconnection.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
