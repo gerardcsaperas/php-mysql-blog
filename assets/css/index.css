@@ -4,6 +4,7 @@
 @import "./footer.css";
 @import "./register.css";
 @import "./user.view.css";
+@import "./new_post.view.css";
 
 body {
     min-height: 100vh;

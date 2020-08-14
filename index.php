@@ -1,4 +1,7 @@
-<?php require_once 'includes/header.php'; ?>       
+<?php   
+require_once 'includes/header.php';
+require_once 'includes/categories_menu.php';
+?>       
         <!-- MAIN CONTAINER -->
         <div class="main-container">
             <main class="posts-box">
