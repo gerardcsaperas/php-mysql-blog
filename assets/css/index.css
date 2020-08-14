@@ -32,7 +32,7 @@ div.main-container aside p {
 }
 
 /*********** REGISTER ***********/
-div.register-form-container {
+div.register-login-form-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,18 +42,18 @@ div.register-form-container {
     margin: 0 auto;
 }
 
-div.register-form-container form {
+div.register-login-form-container form {
     background: bisque;
     border-radius: 20px;
     padding: 1rem;
 }
 
-div.register-form-container form label {
+div.register-login-form-container form label {
     margin: 0.5rem 1rem 0 1rem;
     font-size: 1.25rem;
 }
 
-div.register-form-container form input {
+div.register-login-form-container form input {
     margin: 0.5rem 1rem 1rem 1rem;
     font-size: 1.25rem;
 }
