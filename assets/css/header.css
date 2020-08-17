@@ -3,7 +3,7 @@ header .top-section {
     justify-content: space-around;
     align-items: center;
     background-color: tomato;
-    width: 100vw;
+    width: 100%;
 }
 
 header .top-section a {
@@ -37,7 +37,7 @@ header ul.top-section__access-buttons i {
     margin: 0 0.25rem 0 1rem;
 }
 
-header .top-navbar {
+nav.top-navbar {
     width: 600px;
     margin: 1rem auto 1rem auto;
     border: 2px solid tomato;
@@ -46,7 +46,7 @@ header .top-navbar {
     justify-content: space-evenly;
 }
 
-header .top-navbar a {
+nav.top-navbar a {
     padding: 0.5rem 0 0.5rem 0;
     text-align: center;
     color: dimgrey;
@@ -55,7 +55,7 @@ header .top-navbar a {
     width: 100%;
 }
 
-header .top-navbar a:hover {
+nav.top-navbar a:hover {
     transition-duration: 1s;
     background-color: #504F54;
     color: whitesmoke;

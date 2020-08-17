@@ -8,14 +8,19 @@ div.user-control-panel-container {
     div.user-control-panel-container {
         width: 700px;
     }
+    div.user-control-panel-container h2 {
+        margin-bottom: 2rem;
+    }
     div.user-control-panel-container a {
         background-color: lightgreen;
+        color: #504f54;
         font-size: 1.25rem;
         font-weight: bold;
         border: none;
         border-radius: 10px;
         padding: 0.75rem 1rem;
         box-shadow: 2px 2px 0px 0px #444;
+        text-decoration: none;
     }
     
     div.user-control-panel-container a:hover {

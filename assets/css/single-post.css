@@ -1,0 +1,18 @@
+div.single-post-container {
+    flex: 1 0 auto;
+    width: 900px;
+    margin: 0 auto;
+}
+
+div.single-post-container__title {
+    
+}
+
+div p#single-post-container__post-details {
+    display: flex;
+    font-size: 0.75rem;
+}
+
+div.single-post-container__body {
+    
+}

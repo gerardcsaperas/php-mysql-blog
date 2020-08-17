@@ -1,4 +1,7 @@
-<?php require_once 'includes/header.php'; ?>       
+<?php   
+require_once 'includes/header.php';
+require_once 'includes/categories_menu.php';
+?>       
         <!-- MAIN CONTAINER -->
         <div class="main-container">
             <main class="posts-box">
@@ -24,7 +27,7 @@
                         foreach($last_five_posts as $post) : ?>
                         
                         <article>
-                            <h2><?= $post['title']?></h2>
+                            <h2><a id="post-link" href="./views/single_post.php?title=<?=$post['title'] ?>"><?= $post['title'] ?></a></h2>
                             <p><?= $post['body']?></p>
                             <p>Author: <?= $post['author']?></p>
                             <p>Category: <?= $post['category']?></p>
@@ -39,7 +42,7 @@
             <?php if(!$logged_in) : ?>
                 <aside class='sidebar-right'>
                     <p>You need to be a <a href='./views/register.view.php'>registered</a> user in order to view the content.</p>
-                </aside>";
+                </aside>
             <?php endif; ?>
         
 <?php require_once 'includes/footer.php'; ?>

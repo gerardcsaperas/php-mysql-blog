@@ -3,8 +3,11 @@
 // Render Header
 require_once '../includes/register_login_header.php';
 
-session_start();
+?>
 
+<div class="register-login-form-container">
+    
+<?php
 // Function to validate data from POST request
 function test_input($data) {
   $data = trim($data);
@@ -53,6 +56,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          echo "<a href='login.view.php'>Try again</a>";
     }      
 }           
+?>
+</div>
 
+<?php
 // Render Footer
-require_once '../includes/footer.php';  
+require_once '../includes/footer.php'; 
