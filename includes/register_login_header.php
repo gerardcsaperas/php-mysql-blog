@@ -3,6 +3,9 @@
 // Connect to DB
 require_once '../includes/dbconnection.php';
 
+// Access session variables
+session_start();
+
 ?>
 
 <!DOCTYPE html>
