@@ -46,7 +46,7 @@ function getPostsByCategory($db, $category) {
             . "FROM posts "
             . "LEFT JOIN users on posts.user_id = users.id "
             . "LEFT JOIN categories on posts.category_id = categories.id "
-            . "WHERE category_id = 1";
+            . "WHERE category_id = $category";
 
     // Execute query
     $posts = mysqli_query($db, $query);
