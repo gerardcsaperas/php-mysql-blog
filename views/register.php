@@ -2,6 +2,11 @@
 
 // Render Header
 require_once '../includes/register_login_header.php';
+?>
+
+<div class="register-login-form-container">
+
+<?php
 
 // If a POST request has been submitted...
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -46,6 +51,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
+?>
 
+</div>
+
+<?php
 // Render Footer
 require_once '../includes/footer.php';                       
