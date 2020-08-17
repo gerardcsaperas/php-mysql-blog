@@ -6,7 +6,7 @@ if ($logged_in) : ?>
     <label for="title">Post Title</label><br>
     <input id="title" type="text" name="title" required><br>
     
-    <textarea></textarea><br>
+    <textarea name="body"></textarea><br>
     <div class="category-selector-box">
         <p class="category-selector-box__label-for-categories">Select your post's category:</p>
         <div class="category-selector-box__group">
