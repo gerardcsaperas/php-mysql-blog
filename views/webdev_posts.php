@@ -8,8 +8,8 @@ if ($logged_in) : ?>
 
 <?php
 
-// Query database to retrieve Fitness posts
-getPostsByCategory($db, 2);
+// Query database to retrieve Web Dev posts
+getPostsByCategory($db, 3);
 
 
 // If a non-logged in user tries to read...
