@@ -27,8 +27,11 @@ if ($logged_in) : ?>
 </form>
 </div>
 <?php else : ?>
+<div class="editor-post-box">
 <p>You need to be a <a href="register.view.php">registered</a> user in order to write posts</p>
-
+<br>
+<p>If you already have an account, <a href="login.view.php">log in</a></p>
+</div>
 <?php endif; ?>
 
 <?php require_once '../includes/footer.php'; ?>
