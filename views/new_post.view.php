@@ -1,5 +1,6 @@
-<?php require_once '../includes/register_login_header.php'; ?>
+<?php require_once '../includes/register_login_header.php';
 
+if ($logged_in) : ?>
 <div class="editor-post-box">
 <form action="<?php echo htmlspecialchars('new_post.php');?>" method="POST" enctype="multipart/form-data">
     <label for="title">Post Title</label><br>
@@ -25,6 +26,10 @@
     <input id="submit" type="submit" value="Submit Post" />
 </form>
 </div>
+<?php else : ?>
+<p>You need to be a <a href="register.view.php">registered</a> user in order to write posts</p>
+
+<?php endif; ?>
 
 <?php require_once '../includes/footer.php'; ?>
 
