@@ -17,7 +17,7 @@ $logged_in = isset($_SESSION['user']) ? true : false;
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="../assets/css/index.css" />
         <script src="https://kit.fontawesome.com/85b8e23c67.js" crossorigin="anonymous"></script>
-        <title>Register</title>
+        <title>PHP & MySQL Blog</title>
     </head>
     <body>
         <!-- HEADER -->
