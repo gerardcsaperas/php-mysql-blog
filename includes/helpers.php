@@ -36,3 +36,31 @@ function getHeadOfLastFivePosts($db) {
         return $last_five_posts;
     }
 }
+
+function getPostsByCategory($category) {
+    // Create query to get title of the 5 last added posts
+    // 
+    // Tip: do not forget adding a space after every string if you concatenate on multiple lines
+    // otherwise, query will be empty.
+    $query =  "SELECT * FROM posts WHERE category_id = $category";
+
+    // Execute query
+    $posts = mysqli_query($db, $query);
+
+    // If the query succeeds, return row's name
+    if ($posts->num_rows > 0) {
+        // Output data of each row and "translate" to HTML
+        while($post = $posts->fetch_assoc()) : ?>
+
+            <article>
+                <h2><?= $post['title'] ?></h2>
+                <p><?= substr($post['body'], 0, 30) ?></p>
+                <p>Author: <?= $post['author'] ?></p>
+                <p>Category: <?= $post['category'] ?></p>
+                <p>Post Date: <?= $post['date'] ?></p>
+            </article>
+            <hr>
+            
+        <?php endwhile;
+    }
+}
