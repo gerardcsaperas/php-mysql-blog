@@ -9,17 +9,16 @@
     <div class="category-selector-box">
         <p class="category-selector-box__label-for-categories">Select your post's category:</p>
         <div class="category-selector-box__group">
-            <input type="radio" id="japan" name="category" value="japan"
-                   checked>
+            <input type="radio" id="japan" name="category" value="japan">
             <label for="japan">Japan</label>
-            <input type="radio" id="fitness" name="category" value="fitness"
-                   checked>
+            
+            <input type="radio" id="fitness" name="category" value="fitness">
             <label for="fitness">Fitness</label>
-            <input type="radio" id="web-dev" name="category" value="web-dev"
-                   checked>
+            
+            <input type="radio" id="web-dev" name="category" value="web-dev">
             <label for="web-dev">Web Dev</label>
-            <input type="radio" id="Random" name="category" value="random"
-                   checked>
+            
+            <input type="radio" id="Random" name="category" value="random" checked>
             <label for="random">Random</label>
         </div>
     </div>
