@@ -56,7 +56,7 @@ function getPostsByCategory($db, $category) {
         // For each row, render HTML
         while($post = $posts->fetch_assoc()) : ?>
             <article>
-                <h2><?= $post['post_title'] ?></h2>
+                <h2><a href="single_post.php?title=<?=$post['post_title'] ?>"><?= $post['post_title'] ?></a></h2>
                 <p><?= substr($post['post_body'], 0, 30) ?></p>
                 <p>Author: <?= $post['username'] ?></p>
                 <p>Category: <?= $post['category_name'] ?></p>

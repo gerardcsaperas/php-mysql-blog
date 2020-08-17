@@ -4,7 +4,7 @@ require_once '../includes/register_login_header.php';
 
 if ($logged_in) : ?>
 
-<div>
+<div class="single-post-container">
 
 <?php
 
