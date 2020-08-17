@@ -10,16 +10,16 @@ if ($logged_in) : ?>
     <div class="category-selector-box">
         <p class="category-selector-box__label-for-categories">Select your post's category:</p>
         <div class="category-selector-box__group">
-            <input type="radio" id="japan" name="category" value="japan">
+            <input type="radio" id="japan" name="category" value="1">
             <label for="japan">Japan</label>
             
-            <input type="radio" id="fitness" name="category" value="fitness">
+            <input type="radio" id="fitness" name="category" value="2">
             <label for="fitness">Fitness</label>
             
-            <input type="radio" id="web-dev" name="category" value="web-dev">
+            <input type="radio" id="web-dev" name="category" value="3">
             <label for="web-dev">Web Dev</label>
             
-            <input type="radio" id="Random" name="category" value="random" checked>
+            <input type="radio" id="Random" name="category" value="4" checked>
             <label for="random">Random</label>
         </div>
     </div>
