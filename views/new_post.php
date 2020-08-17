@@ -36,7 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($insert_new_post) {
         echo "<p>New post uploaded successfully</p>";
     } else {
+        if (mysqli_error($db) === "Duplicate entry '$title' for key 'post_title'") {
+            echo "<p>Duplicate post title, please go back<br>in order to change it.</p>";
+        } else {
         echo "<p>Error" . mysqli_error($db) . "</p>";
+        }
     }
 };
 
