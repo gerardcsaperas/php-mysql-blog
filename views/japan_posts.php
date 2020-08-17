@@ -4,8 +4,7 @@ require_once '../includes/register_login_header.php';
 
 if ($logged_in) : ?>
 
-<div>
-
+<div class="posts-by-category">
 <?php
 
 // Query database to retrieve Japan's posts

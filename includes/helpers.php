@@ -11,6 +11,7 @@ function getHeadOfLastFivePosts($db) {
             . "ON posts.user_id = users.id "
             . "LEFT JOIN categories "
             . "ON posts.category_id = categories.id "
+            . "ORDER BY post_date DESC "
             . "LIMIT 5";
 
     // Execute query
@@ -56,7 +57,7 @@ function getPostsByCategory($db, $category) {
         // For each row, render HTML
         while($post = $posts->fetch_assoc()) : ?>
             <article>
-                <h2><a href="single_post.php?title=<?=$post['post_title'] ?>"><?= $post['post_title'] ?></a></h2>
+                <h2><a id="post-link" href="single_post.php?title=<?=$post['post_title'] ?>"><?= $post['post_title'] ?></a></h2>
                 <p><?= substr($post['post_body'], 0, 30) ?></p>
                 <p>Author: <?= $post['username'] ?></p>
                 <p>Category: <?= $post['category_name'] ?></p>
@@ -89,14 +90,10 @@ function getSinglePost($db) {
     if ($posts->num_rows > 0) {
         // For each row, render HTML
         while($post = $posts->fetch_assoc()) : ?>
-            <div>
-                <h2><?= $post['post_title'] ?></h2>
-                <p><?= $post['post_body'] ?></p>
-                <p>Author: <?= $post['username'] ?></p>
-                <p>Category: <?= $post['category_name'] ?></p>
-                <p>Post Date: <?= $post['post_date'] ?></p>
-            </div>
             
+                <h2 class="single-post-container__title"><?= $post['post_title'] ?></h2>
+                <p id="single-post-container__post-details">Post by <?= $post['username'] ?>. <?= $post['category_name'] ?>, <?= $post['post_date'] ?></p>
+                <p class="single-post-container__body"><?= $post['post_body'] ?></p>     
         <?php endwhile;
     }
 }

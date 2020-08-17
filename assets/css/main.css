@@ -6,7 +6,6 @@ div.main-container {
 }
 
 div.main-container .posts-box {
-    border: 1px solid black;
     width: 900px;
     margin-right: 5rem;
 }
@@ -19,4 +18,28 @@ div.main-container aside p {
     padding: 1rem;
     background-color: beige;
     border-radius: 10px;
+}
+
+div.main-container .posts-box a#post-link {
+    text-decoration: none;
+    color: #4c4c4c;
+}
+
+div.main-container .posts-box a#post-link:hover {
+    text-decoration: underline;
+}
+
+div.posts-by-category {
+    flex: 1 0 auto;
+    width: 900px;
+    margin: 0 auto;
+}
+
+div.posts-by-category a#post-link {
+    text-decoration: none;
+    color: #4c4c4c;
+}
+
+div.posts-by-category a#post-link:hover {
+    text-decoration: underline;
 }

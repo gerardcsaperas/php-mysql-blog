@@ -1,10 +1,14 @@
-
+/* 
+    Created on : Aug 17, 2020, 11:26:20 AM
+    Author     : Gerard
+*/
 @import "./main.css";
 @import "./header.css";
 @import "./footer.css";
 @import "./register.css";
 @import "./user.view.css";
 @import "./new_post.view.css";
+@import "./single-post.css";
 
 body {
     min-height: 100vh;
