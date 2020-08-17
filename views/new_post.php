@@ -32,27 +32,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $repeated = mysqli_query($db, $check_repeated);
     
+    // If post title is repeated, throw error
     if ($repeated) {
         echo "<p>A post with this title already exists</p><br>"
             ."<p>Please go back in order to change your post's title.</p>";
-        die();
-    }
-    
-    // Insert data from POST request into posts table
-    $new_post = "INSERT INTO posts VALUES(NULL, '$user_id', '$category', '$title', '$body', CURDATE())";
-
-    $insert_new_post = mysqli_query($db, $new_post);
-    
-    // If user inserted correctly...Else...
-    if($insert_new_post) {
-        echo "<p>New post uploaded successfully</p>";
     } else {
-        if (mysqli_error($db) === "Duplicate entry '$email' for key 'email'") {
-            echo "<p>A user with this email already exists.</p>";
+        // Insert data from POST request into posts table
+        $new_post = "INSERT INTO posts VALUES(NULL, '$user_id', '$category', '$title', '$body', CURDATE())";
+
+        $insert_new_post = mysqli_query($db, $new_post);
+
+        // If post inserted correctly...Else...
+        if($insert_new_post) {
+            echo "<p>New post uploaded successfully</p>";
         } else {
             echo "<p>Error" . mysqli_error($db) . "</p>";
+            }
         }
-    }
 };
 
 // If a non-logged in user tries to post...
