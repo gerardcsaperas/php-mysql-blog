@@ -6,6 +6,9 @@ require_once '../includes/dbconnection.php';
 // Access session variables
 session_start();
 
+// Check if user is logged in
+$logged_in = isset($_SESSION['user']) ? true : false;
+
 ?>
 
 <!DOCTYPE html>
