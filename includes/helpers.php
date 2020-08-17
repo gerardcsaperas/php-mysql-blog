@@ -37,27 +37,30 @@ function getHeadOfLastFivePosts($db) {
     }
 }
 
-function getPostsByCategory($category) {
+function getPostsByCategory($db, $category) {
     // Create query to get title of the 5 last added posts
     // 
     // Tip: do not forget adding a space after every string if you concatenate on multiple lines
     // otherwise, query will be empty.
-    $query =  "SELECT * FROM posts WHERE category_id = $category";
+    $query =  "SELECT posts.post_title, posts.post_body, posts.post_date, users.username, categories.category_name "
+            . "FROM posts "
+            . "LEFT JOIN users on posts.user_id = users.id "
+            . "LEFT JOIN categories on posts.category_id = categories.id "
+            . "WHERE category_id = 1";
 
     // Execute query
     $posts = mysqli_query($db, $query);
 
-    // If the query succeeds, return row's name
+    // If the query succeeds...
     if ($posts->num_rows > 0) {
-        // Output data of each row and "translate" to HTML
+        // For each row, render HTML
         while($post = $posts->fetch_assoc()) : ?>
-
             <article>
-                <h2><?= $post['title'] ?></h2>
-                <p><?= substr($post['body'], 0, 30) ?></p>
-                <p>Author: <?= $post['author'] ?></p>
-                <p>Category: <?= $post['category'] ?></p>
-                <p>Post Date: <?= $post['date'] ?></p>
+                <h2><?= $post['post_title'] ?></h2>
+                <p><?= substr($post['post_body'], 0, 30) ?></p>
+                <p>Author: <?= $post['username'] ?></p>
+                <p>Category: <?= $post['category_name'] ?></p>
+                <p>Post Date: <?= $post['post_date'] ?></p>
             </article>
             <hr>
             
