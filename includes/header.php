@@ -6,6 +6,7 @@ require_once 'includes/dbconnection.php';
 // Require helper functions
 require_once 'helpers.php';
 
+// Access session variables
 session_start();
 
 // Check if user is logged in

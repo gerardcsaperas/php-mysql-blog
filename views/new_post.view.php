@@ -1,7 +1,7 @@
 <?php require_once '../includes/register_login_header.php'; ?>
 
 <div class="editor-post-box">
-<form action="<?php echo htmlspecialchars('register.php');?>" method="POST" enctype="multipart/form-data">
+<form action="<?php echo htmlspecialchars('new_post.php');?>" method="POST" enctype="multipart/form-data">
     <label for="title">Post Title</label><br>
     <input id="title" type="text" name="title" required><br>
     
