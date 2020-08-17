@@ -3,6 +3,9 @@
 // Connect to DB
 require_once '../includes/dbconnection.php';
 
+// Require helper functions
+require_once 'helpers.php';
+
 // Access session variables
 session_start();
 
