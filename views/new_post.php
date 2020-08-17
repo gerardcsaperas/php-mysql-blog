@@ -33,7 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $repeated = mysqli_query($db, $check_repeated);
     
     if ($repeated) {
-        echo "<p>A post with this title already exists</p>";
+        echo "<p>A post with this title already exists</p><br>"
+            ."<p>Please go back in order to change your post's title.</p>";
         die();
     }
     
