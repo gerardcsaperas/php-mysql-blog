@@ -27,28 +27,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $user_id = $_SESSION['user']['id'];
     
-    // Check if a post with the same title already exists
-    $check_repeated = "SELECT post_title FROM posts WHERE post_title = $title";
-    
-    $repeated = mysqli_query($db, $check_repeated);
-    
-    // If post title is repeated, throw error
-    if ($repeated) {
-        echo "<p>A post with this title already exists</p><br>"
-            ."<p>Please go back in order to change your post's title.</p>";
+    // Insert data from POST request into posts table
+    $new_post = "INSERT INTO posts VALUES(NULL, '$user_id', '$category', '$title', '$body', CURDATE())";
+
+    $insert_new_post = mysqli_query($db, $new_post);
+
+    // If post inserted correctly...Else...
+    if($insert_new_post) {
+        echo "<p>New post uploaded successfully</p>";
     } else {
-        // Insert data from POST request into posts table
-        $new_post = "INSERT INTO posts VALUES(NULL, '$user_id', '$category', '$title', '$body', CURDATE())";
-
-        $insert_new_post = mysqli_query($db, $new_post);
-
-        // If post inserted correctly...Else...
-        if($insert_new_post) {
-            echo "<p>New post uploaded successfully</p>";
-        } else {
-            echo "<p>Error" . mysqli_error($db) . "</p>";
-            }
-        }
+        echo "<p>Error" . mysqli_error($db) . "</p>";
+    }
 };
 
 // If a non-logged in user tries to post...
