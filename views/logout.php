@@ -2,8 +2,6 @@
 
 require_once '../includes/register_login_header.php';
 
-session_start();
-
 session_unset();
 
 session_destroy();
