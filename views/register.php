@@ -11,8 +11,6 @@ require_once '../includes/register_login_header.php';
 // If a POST request has been submitted...
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    session_start();
-
     // Function to validate data from POST request
     function test_input($data) {
       $data = trim($data);
