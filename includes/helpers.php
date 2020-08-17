@@ -80,7 +80,7 @@ function getSinglePost($db) {
             . "FROM posts "
             . "LEFT JOIN users on posts.user_id = users.id "
             . "LEFT JOIN categories on posts.category_id = categories.id "
-            . "WHERE post_title = $post_title";
+            . "WHERE post_title = '$post_title'";
 
     // Execute query
     $posts = mysqli_query($db, $query);

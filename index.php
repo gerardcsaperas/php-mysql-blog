@@ -27,7 +27,7 @@ require_once 'includes/categories_menu.php';
                         foreach($last_five_posts as $post) : ?>
                         
                         <article>
-                            <h2><a href="single_post.php?title=<?=$post['title'] ?>"><?= $post['title'] ?></a></h2>
+                            <h2><a href="./views/single_post.php?title=<?=$post['title'] ?>"><?= $post['title'] ?></a></h2>
                             <p><?= $post['body']?></p>
                             <p>Author: <?= $post['author']?></p>
                             <p>Category: <?= $post['category']?></p>
